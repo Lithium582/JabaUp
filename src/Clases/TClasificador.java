@@ -123,7 +123,11 @@ public class TClasificador {
         boolean ordenado = false;
         int ultimo = vector.length - 1;
         
+        int contador = 0;
+        int intercambios = 0;
+        
         while (!ordenado) {
+            contador++;
             ordenado = true;
             for (int i = 0; i < ultimo; i++) {
                 if (vector[i] > vector[i + 1]) {
@@ -131,11 +135,13 @@ public class TClasificador {
                     vector[i + 1] = vector[i];
                     vector[i] = aux;
                     ordenado = false;
+                    intercambios++;
                 }
             }
             ultimo--;
         }
 
+        System.out.println("Ejecuciones: " + contador + " e intercambios: " + intercambios);
         return vector;
     }
 

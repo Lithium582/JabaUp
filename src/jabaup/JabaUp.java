@@ -67,6 +67,8 @@ public class JabaUp {
                     } else {
                         System.out.println("Ingrese la cantidad de elementos");
                         int cantidad = Integer.parseInt(reader.readLine());
+                        System.out.println("A continuación se realizará el ordenamiento");
+                        System.out.println("Y se guardarán los resultados en un archivo de texto en src/");
                         
                         objClasificador.Clasificador(op, cantidad);
                     }
